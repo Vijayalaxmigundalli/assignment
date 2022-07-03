@@ -1,0 +1,61 @@
+#include"acc.h"
+
+
+void Account::create_account()
+{
+	
+	cout<<"Enter the Account No. : ";
+	cin>>acno;
+	cout<<"Enter the Name of the Account holder : ";
+	cin.ignore();
+	cin.getline(name,50);
+	cout<<"Enter Type of the Account (C/S) : ";
+	cin>>type;
+	type=toupper(type);
+	cout<<"Enter The Initial amount : ";
+	cin>>deposit;
+	cout<<"Account Created..";
+}
+
+void Account::show_account() 
+{
+	cout<<"Account No. : "<<acno;
+	cout<<"Account Holder Name : ";
+	cout<<name;
+	cout<<"Type of Account : "<<type;
+	cout<<"Balance amount : "<<deposit;
+}
+
+
+void Account::modify()
+{
+	cout<<"Account No. : "<<acno;
+	cout<<"Modify Account Holder Name : ";
+	cin.ignore();
+	cin.getline(name,50);
+	cout<<"Modify Type of Account : ";
+	cin>>type;
+}
+
+void account::login()
+{
+cout<<"\n Acc no:"<<accno;
+cout<<"\n Acc holder:";
+cout<<name;
+cout<<"\n Acc type:"<<type;
+}
+void threadfn(int custid){
+	cout<<custid<<endl;
+}
+void sp_thread()
+{
+	int n;
+	    std::vector<thread> threads(n);
+	         sp_threads:
+	     for (int i = 0; i < n; i++) {
+          threads[i] = thread(threadfn, i + 1);
+		                 }
+           for (auto& th : threads) {
+		   th.join();
+ }
+		  }
