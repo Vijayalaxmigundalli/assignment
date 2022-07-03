@@ -1,0 +1,24 @@
+#include"acc.h"
+#include"account.cpp"
+
+int main()
+{
+  Account acc();
+  acc.create_account();
+  Passbook pass();
+ pass.void_login();
+  
+
+fstream accounth;
+accounth.open("accounth.txt",ios::in);
+if(!accounth){
+	cout<<"NULL";}
+else{
+	cout<<"vijayalaxmi" , "savings acc";
+	accounth<<"vijayalaxmi";
+	account.h.close();}
+
+sp_thread.join();
+return 0;
+
+}
